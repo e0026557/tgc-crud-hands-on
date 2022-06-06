@@ -37,8 +37,10 @@ app.post('/add-book', function(req, res) {
 })
 
 // Update books
-app.get('/update-book', function(req, res) {
-    res.render('update-book-form.hbs');
+app.get('/update-book/:book_id', function(req, res) {
+    let bookId = req.params.book_id;
+    let book = database.getBook(bookId) 
+    res.render('update-book-form.hbs', book);
 })
 
 app.post('/update-book', function(req, res) {
@@ -61,6 +63,9 @@ app.post('/delete-book', function(req, res) {
     database.deleteBook(id);
     res.redirect('/');
 })
+
+// Find book by id
+// TODO
 
 app.listen(3000, function(){
     console.log("Server has started");

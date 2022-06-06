@@ -5,21 +5,16 @@
 
     <form method="post">
         <div>
-            <label>ID :</label>
-            <input type="text" name="id" id="id" class="form-control">
-        </div>
-
-        <div>
             <label>Title :</label>
-            <input type="text" name="title" id="title" class="form-control">
+            <input type="text" name="title" id="title" class="form-control" value="{{title}}">
         </div>
 
         <div>
             <label>ISBN :</label>
-            <input type="text" name="isbn" id="isbn" class="form-control">
+            <input type="text" name="isbn" id="isbn" class="form-control" value="{{isbn}}">
         </div>
 
-        <input type="submit" value="Submit" class="btn btn-primary">
+        <input type="submit" value="Submit" class="btn btn-primary mt-5">
     </form>
 
 {{/block}}
