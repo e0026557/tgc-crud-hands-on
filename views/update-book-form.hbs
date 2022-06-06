@@ -1,0 +1,26 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+
+    <h1>Update Book</h1>
+
+    <form method="post">
+        <div>
+            <label>ID :</label>
+            <input type="text" name="id" id="id" class="form-control">
+        </div>
+
+        <div>
+            <label>Title :</label>
+            <input type="text" name="title" id="title" class="form-control">
+        </div>
+
+        <div>
+            <label>ISBN :</label>
+            <input type="text" name="isbn" id="isbn" class="form-control">
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+
+{{/block}}
+{{/extends}}
